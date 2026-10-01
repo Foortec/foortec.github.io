@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="pl" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Piotr Czajka &middot; Programista PHP / Laravel</title>
+    <meta
+        name="description"
+        content="Piotra Czajka — programista PHP / Laravel skupiony na backendzie i tworzeniu oraz utrzymywaniu produkcyjnych aplikacji internetowych."
+    >
+    <meta name="theme-color" content="#0b0d12">
+
+    <script>
+        (() => {
+            const storedTheme = localStorage.getItem('portfolio-theme');
+            const systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark';
+
+            document.documentElement.setAttribute(
+                'data-bs-theme',
+                storedTheme === 'light' || storedTheme === 'dark'
+                    ? storedTheme
+                    : systemTheme
+            );
+        })();
+    </script>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Główna nawigacja">
+        <div class="container">
+            <a class="navbar-brand fw-semibold" href="#top" aria-label="Powrót na górę strony">
+                <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+                Piotr Czajka
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavigation"
+                aria-controls="mainNavigation"
+                aria-expanded="false"
+                aria-label="Przełącz nawigację"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projekty</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#opensource">Open Source</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Umiejętności</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">O mnie</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontakt</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a
+                            class="btn btn-sm btn-outline-secondary"
+                            href="cv.pdf"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            CV
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-1 mt-2 mt-lg-0">
+                        <button
+                            class="btn btn-sm btn-theme"
+                            type="button"
+                            id="themeToggle"
+                            aria-label="Przełącz motyw"
+                            title="Przełącz motyw"
+                        >
+                            <span id="themeIcon" aria-hidden="true">☀</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main id="top">
+    <section class="hero-section section-space" aria-labelledby="hero-title">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-9">
+                    <p class="eyebrow mb-3">
+                        PHP &middot; Laravel &middot; Backend
+                    </p>
+
+                    <h1 id="hero-title" class="display-3 fw-bold mb-4">
+                        Programista PHP / Laravel
+                    </h1>
+
+                    <p class="hero-lead mb-4">
+                        Programista skoncentrowany na backendzie, posiadający doświadczenie
+                        komercyjne oraz doświadczenie w pracy z produkcyjnymi aplikacjami
+                        internetowymi — ich tworzeniu, rozwijaniu i utrzymaniu.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-primary btn-lg" href="#projects">
+                            Zobacz projekty
+                        </a>
+
+                        <a
+                            class="btn btn-outline-secondary btn-lg"
+                            href="cv.pdf"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Zobacz CV
+                        </a>
+                    </div>
+
+                    <div class="hero-links mt-4" aria-label="Linki zewnętrzne">
+                        <a
+                            href="https://github.com/Foortec"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+
+                        <span aria-hidden="true">&middot;</span>
+
+                        <a href="#contact">
+                            Kontakt
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        id="projects"
+        class="section-space border-top"
+        aria-labelledby="projects-title"
+    >
+        <div class="container">
+            <div class="section-heading mb-5">
+                <p class="eyebrow mb-2">01 / Projekty</p>
+
+                <h2
+                    id="projects-title"
+                    class="display-6 fw-semibold mb-3"
+                >
+                    Wybrane projekty
+                </h2>
+
+                <p class="section-intro">
+                    Projekty rozwijane z naciskiem na praktyczne zastosowanie,
+                    obejmujące development backendu, integracje, infrastrukturę
+                    oraz utrzymanie aplikacji.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <article class="project-card h-100">
+                        <div class="project-card-body">
+                            <div class="project-topline">
+                                <span class="project-type">
+                                    Aplikacja produkcyjna
+                                </span>
+
+                                <span class="project-status">
+                                    Działa
+                                </span>
+                            </div>
+
+                            <h3 class="h4 mt-3">
+                                NudeScroll
+                            </h3>
+
+                            <p class="text-body-secondary">
+                                Produkcyjna aplikacja internetowa oparta na Laravelu,
+                                samodzielnie rozwijana i utrzymywana, obejmująca logikę
+                                aplikacji, zadania asynchroniczne, przetwarzanie mediów,
+                                system rekomendacji, SEO oraz wdrożenie.
+                            </p>
+
+                            <ul
+                                class="tag-list"
+                                aria-label="Wykorzystane technologie"
+                            >
+                                <li>PHP</li>
+                                <li>Laravel</li>
+                                <li>MySQL</li>
+                                <li>Docker</li>
+                                <li>Nginx</li>
+                                <li>Git</li>
+                            </ul>
+                        </div>
+
+                        <footer class="project-card-footer">
+                            <a
+                                class="stretched-link text-decoration-none fw-semibold"
+                                href="https://nudescroll.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Odwiedź projekt
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </footer>
+                    </article>
+                </div>
+
+                <div class="col-lg-6">
+                    <article class="project-card h-100">
+                        <div class="project-card-body">
+                            <div class="project-topline">
+                                <span class="project-type">
+                                    Aplikacja internetowa
+                                </span>
+
+                                <span class="project-status">
+                                    Działa
+                                </span>
+                            </div>
+
+                            <h3 class="h4 mt-3">
+                                Conqbit
+                            </h3>
+
+                            <p class="text-body-secondary">
+                                Aplikacja internetowa oparta na Laravelu, służąca do
+                                analizy rynku kryptowalut, łącząca przetwarzanie danych
+                                po stronie backendu, integracje z zewnętrznymi API
+                                oraz responsywny frontend.
+                            </p>
+
+                            <ul
+                                class="tag-list"
+                                aria-label="Wykorzystane technologie"
+                            >
+                                <li>PHP</li>
+                                <li>Laravel</li>
+                                <li>API</li>
+                                <li>JavaScript</li>
+                                <li>MySQL</li>
+                            </ul>
+                        </div>
+
+                        <footer class="project-card-footer">
+                            <a
+                                class="stretched-link text-decoration-none fw-semibold"
+                                href="https://conqbit.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Odwiedź projekt
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        id="opensource"
+        class="section-space border-top"
+        aria-labelledby="opensource-title"
+    >
+        <div class="container">
+            <div class="section-heading mb-5">
+                <p class="eyebrow mb-2">02 / Open Source</p>
+
+                <h2
+                    id="opensource-title"
+                    class="display-6 fw-semibold mb-3"
+                >
+                    Reużywalne komponenty
+                </h2>
+
+                <p class="section-intro">
+                    Wybrane biblioteki PHP i Laravel wydzielone z rzeczywistych
+                    projektów i rozwijane jako niezależne, reużywalne komponenty.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <article class="open-source-card h-100">
+                        <span class="coming-soon">
+                            W przygotowaniu
+                        </span>
+
+                        <h3 class="h5 mt-3">
+                            Pakiet Laravel
+                        </h3>
+
+                        <p class="text-body-secondary mb-0">
+                            Reużywalny komponent wydzielony z produkcyjnej aplikacji.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-lg-4">
+                    <article class="open-source-card h-100">
+                        <span class="coming-soon">
+                            W przygotowaniu
+                        </span>
+
+                        <h3 class="h5 mt-3">
+                            Pakiet PHP
+                        </h3>
+
+                        <p class="text-body-secondary mb-0">
+                            Niezależna funkcjonalność zaprojektowana z myślą o
+                            czytelnym API, testowaniu i ponownym wykorzystaniu.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-lg-4">
+                    <article class="open-source-card h-100">
+                        <span class="coming-soon">
+                            W przygotowaniu
+                        </span>
+
+                        <h3 class="h5 mt-3">
+                            Kolejne biblioteki
+                        </h3>
+
+                        <p class="text-body-secondary mb-0">
+                            Kolejne komponenty będą publikowane w miarę
+                            przygotowywania ich do niezależnego wykorzystania.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        id="skills"
+        class="section-space border-top"
+        aria-labelledby="skills-title"
+    >
+        <div class="container">
+            <div class="section-heading mb-5">
+                <p class="eyebrow mb-2">03 / Umiejętności</p>
+
+                <h2
+                    id="skills-title"
+                    class="display-6 fw-semibold mb-3"
+                >
+                    Umiejętności techniczne
+                </h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-group h-100">
+                        <h3 class="h6 text-uppercase">
+                            Backend
+                        </h3>
+
+                        <hr>
+
+                        <p>
+                            PHP &middot; Laravel &middot; OOP &middot; SQL &middot; MySQL / MariaDB &middot; REST API
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-group h-100">
+                        <h3 class="h6 text-uppercase">
+                            Frontend
+                        </h3>
+
+                        <hr>
+
+                        <p>
+                            JavaScript &middot; AJAX &middot; DOM &middot; HTML &middot; CSS &middot; Bootstrap
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-group h-100">
+                        <h3 class="h6 text-uppercase">
+                            Narzędzia i środowisko
+                        </h3>
+
+                        <hr>
+
+                        <p>
+                            Git &middot; Pull Requesty &middot; Code Review &middot; Docker &middot; Linux
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-group h-100">
+                        <h3 class="h6 text-uppercase">
+                            Pozostałe
+                        </h3>
+
+                        <hr>
+
+                        <p>
+                            C++ &middot; BATCH &middot; Angielski B1/B2
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        id="about"
+        class="section-space border-top"
+        aria-labelledby="about-title"
+    >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="section-heading">
+                        <p class="eyebrow mb-2">04 / O mnie</p>
+
+                        <h2
+                            id="about-title"
+                            class="display-6 fw-semibold mb-4"
+                        >
+                            Jak pracuję
+                        </h2>
+                    </div>
+
+                    <div class="about-copy">
+                        <p>
+                            Przede wszystkim zajmuję się backendem w PHP i Laravelu,
+                            ale swobodnie realizuję również elementy frontendu
+                            niezbędne do kompleksowego wdrożenia funkcjonalności.
+                        </p>
+
+                        <p>
+                            Mam doświadczenie w tworzeniu nowych funkcji, utrzymywaniu
+                            istniejących systemów, analizowaniu i naprawianiu błędów
+                            w nieznanym kodzie, integracjach z zewnętrznymi API oraz
+                            pracy z SQL. Brałem również udział w stopniowej modernizacji
+                            aplikacji napisanej wcześniej w czystym PHP.
+                        </p>
+
+                        <p class="mb-0">
+                            Cenię czytelny kod, pragmatyczne rozwiązania oraz zrozumienie
+                            istniejącego systemu przed wprowadzaniem zmian.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        id="contact"
+        class="section-space border-top"
+        aria-labelledby="contact-title"
+    >
+        <div class="container">
+            <div class="contact-panel">
+                <div>
+                    <p class="eyebrow mb-2">
+                        05 / Kontakt
+                    </p>
+
+                    <h2
+                        id="contact-title"
+                        class="display-6 fw-semibold mb-3"
+                    >
+                        Skontaktujmy się
+                    </h2>
+
+                    <p class="text-body-secondary mb-0">
+                        W sprawie pracy, współpracy lub rozmowy na temat technologii.
+                    </p>
+                </div>
+
+                <div class="d-flex flex-wrap gap-2">
+                    <a
+                        class="btn btn-primary"
+                        href="mailto:piotr.czajka@opoczta.pl"
+                    >
+                        Napisz do mnie
+                    </a>
+
+                    <a
+                        class="btn btn-outline-secondary"
+                        href="https://github.com/Foortec"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer border-top">
+    <div class="container py-4">
+        <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2"
+        >
+            <small class="text-body-secondary">
+                © <span id="currentYear"></span> Piotr Czajka
+            </small>
+
+            <a
+                class="small text-body-secondary text-decoration-none"
+                href="#top"
+            >
+                Powrót na górę ↑
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
