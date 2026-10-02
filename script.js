@@ -11,7 +11,8 @@
     const updateThemeControl = (theme) => {
         const isDark = theme === 'dark';
 
-        icon.textContent = isDark ? '☀' : '☾';
+        icon.classList.toggle('bi-brightness-high', !isDark);
+        icon.classList.toggle('bi-moon', isDark);
         toggle.setAttribute(
             'aria-label',
             isDark ? 'Jasny motyw' : 'Ciemny motyw'
