@@ -8,6 +8,21 @@
     const navbarToggler = document.querySelector('.navbar-toggler');
     const year = document.getElementById('currentYear');
 
+    const nsfwModal = document.getElementById('nsfwConfirmationModal');
+    const confirmNsfwVisit = document.getElementById('confirmNsfwVisit');
+
+    if (nsfwModal && confirmNsfwVisit) {
+        confirmNsfwVisit.addEventListener('click', () => {
+            window.open(
+                'https://nudescroll.com',
+                '_blank',
+                'noopener,noreferrer'
+            );
+
+            bootstrap.Modal.getOrCreateInstance(nsfwModal).hide();
+        });
+    }
+
     const updateThemeControl = (theme) => {
         const isDark = theme === 'dark';
 
