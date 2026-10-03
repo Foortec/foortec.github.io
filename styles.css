@@ -160,6 +160,11 @@ body {
     border-top: 1px solid var(--bs-border-color);
 }
 
+.open-source-card-footer {
+    padding: 1rem 0 0;
+    border-top: 1px solid var(--bs-border-color);
+}
+
 .project-topline {
     display: flex;
     justify-content: space-between;
